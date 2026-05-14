@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | PackNova Industries</title>
+  <meta name="description" content="PackNova's packaging industry blog – insights on sustainable packaging, e-commerce trends, smart packaging innovations, and industrial solutions.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-listing.hidden { display: none; }
+    .article-full { display: none; }
+    .article-full.active { display: block; }
+    .active-dot { background: var(--terra) !important; width: 20px !important; }
+    .testi-dot { width: 8px; height: 8px; border-radius: 99px; background: var(--border-dark); cursor: pointer; transition: all 0.3s; display: inline-block; }
+  </style>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">Pack<em>Nova</em></div><div class="loader-line"><div class="loader-fill"></div></div></div>
+<div id="nav-overlay" class="nav-overlay"></div>
+<nav class="navbar">
+  <div class="container-fluid px-lg-5 d-flex align-items-center gap-3">
+    <a class="brand me-auto" href="index.html"><div class="brand-box">PN</div>Pack<em>Nova</em></a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="products.html">Products</a><a class="nav-link" href="industries.html">Industries</a><a class="nav-link" href="manufacturing.html">Manufacturing</a><a class="nav-link" href="sustainability.html">Sustainability</a><a class="nav-link" href="quality.html">Quality</a><a class="nav-link active" href="blog.html">Blog</a><a class="nav-link" href="careers.html">Careers</a><a class="nav-link nav-cta" href="contact.html">Contact Us</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-accent"></div>
+  <div class="container px-lg-5 page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span style="color:var(--border-dark);">/</span> <span>Blog</span></div>
+    <h1 class="page-hero-title">Packaging <em>Insights</em> &amp; Trends</h1>
+    <p class="body-text mt-3" style="max-width:480px;">Expert articles on sustainable packaging, industry trends, manufacturing innovations, and e-commerce solutions from the PackNova team.</p>
+  </div>
+</section>
+
+<!-- ═══ BLOG LISTING ═══ -->
+<div class="blog-listing" id="blog-listing">
+
+  <!-- Featured -->
+  <section class="section white-section">
+    <div class="container px-lg-5">
+      <div class="row align-items-center g-5 reveal">
+        <div class="col-lg-7">
+          <div style="height:400px;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;box-shadow:var(--shadow);" onclick="showArticle(1)">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#c5e8d4,#8ec4a8) url('https://images.unsplash.com/photo-1572177812156-58036aae439c?w=900&q=80') center/cover no-repeat;transition:transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex gap-3 mb-3"><span class="blog-tag">Sustainability</span><span class="blog-date">January 15, 2024</span></div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:14px;cursor:pointer;color:var(--charcoal);transition:color 0.3s;" onclick="showArticle(1)" onmouseover="this.style.color='var(--green)'" onmouseout="this.style.color='var(--charcoal)'">The Future of Sustainable Packaging in India</h2>
+          <p class="body-text mb-4">India's packaging industry is undergoing a transformative shift toward sustainability. With Extended Producer Responsibility regulations and rising consumer awareness, brands are rethinking every layer of their packaging strategy.</p>
+          <div class="blog-author-row mb-4">
+            <div class="blog-ava">AK</div>
+            <div><div class="blog-aname">Anand Kumar</div><div class="blog-read">Head of Sustainability · 8 min read</div></div>
+          </div>
+          <button onclick="showArticle(1)" class="btn-green">Read Article <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="row g-4 mt-5">
+        <div class="col-md-6 col-lg-3 reveal delay-1">
+          <div class="blog-card" style="cursor:pointer;" onclick="showArticle(2)">
+            <div class="blog-thumb"><div style="background:linear-gradient(135deg,#d4e8c4,#a4c88e) url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80') center/cover no-repeat;"></div></div>
+            <div class="blog-body">
+              <div class="d-flex gap-3 mb-2"><span class="blog-tag">Trends</span><span class="blog-date">Dec 28, 2023</span></div>
+              <div class="blog-title">Eco-Friendly Packaging Trends Reshaping 2024</div>
+              <p class="blog-excerpt">Mycelium packaging, seaweed films, and agricultural fibre boards — the innovations arriving this year.</p>
+              <div class="blog-author-row"><div class="blog-ava">SM</div><div><div class="blog-aname">Sonal Mehta</div><div class="blog-read">6 min read</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal delay-2">
+          <div class="blog-card" style="cursor:pointer;" onclick="showArticle(3)">
+            <div class="blog-thumb"><div style="background:linear-gradient(135deg,#c5ddd0,#8fb8a3) url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80') center/cover no-repeat;"></div></div>
+            <div class="blog-body">
+              <div class="d-flex gap-3 mb-2"><span class="blog-tag">Industry</span><span class="blog-date">Dec 10, 2023</span></div>
+              <div class="blog-title">Why Industrial Packaging is the Backbone of India's Supply Chain</div>
+              <p class="blog-excerpt">The often-overlooked role of industrial packaging in enabling India's manufacturing sector to compete globally.</p>
+              <div class="blog-author-row"><div class="blog-ava">VP</div><div><div class="blog-aname">Vikram Patel</div><div class="blog-read">7 min read</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal delay-3">
+          <div class="blog-card" style="cursor:pointer;" onclick="showArticle(4)">
+            <div class="blog-thumb"><div style="background:linear-gradient(135deg,#d8ddf0,#a8aed8) url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80') center/cover no-repeat;background-color:var(--cream-dark);"></div></div>
+            <div class="blog-body">
+              <div class="d-flex gap-3 mb-2"><span class="blog-tag">Innovation</span><span class="blog-date">Nov 22, 2023</span></div>
+              <div class="blog-title">Smart Packaging Innovations Transforming the Industry</div>
+              <p class="blog-excerpt">QR codes, NFC tags, time-temperature indicators, and AI-powered design making packaging smarter.</p>
+              <div class="blog-author-row"><div class="blog-ava">RJ</div><div><div class="blog-aname">Rohit Jain</div><div class="blog-read">5 min read</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal delay-4">
+          <div class="blog-card" style="cursor:pointer;" onclick="showArticle(5)">
+            <div class="blog-thumb"><div style="background:linear-gradient(135deg,#f5e6d0,#e8c9a0) url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80') center/cover no-repeat;"></div></div>
+            <div class="blog-body">
+              <div class="d-flex gap-3 mb-2"><span class="blog-tag">E-Commerce</span><span class="blog-date">Nov 5, 2023</span></div>
+              <div class="blog-title">The Ultimate Guide to E-Commerce Packaging in India</div>
+              <p class="blog-excerpt">Building a thriving online business requires packaging that protects, impresses, and communicates your brand.</p>
+              <div class="blog-author-row"><div class="blog-ava">NK</div><div><div class="blog-aname">Neha Kapoor</div><div class="blog-read">10 min read</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section-sm cream-section">
+    <div class="container px-lg-5 reveal">
+      <div class="newsletter-wrap">
+        <div class="row align-items-center g-4" style="position:relative;z-index:1;">
+          <div class="col-lg-6">
+            <div style="font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:10px;">Stay Updated</div>
+            <h3 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--white);margin-bottom:8px;">Get Packaging Insights in Your Inbox</h3>
+            <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Monthly newsletter with industry trends and expert tips.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex gap-3 flex-wrap">
+              <input type="email" class="newsletter-input" placeholder="Your email address">
+              <button class="newsletter-btn">Subscribe →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ARTICLE 1 ═══ -->
+<div class="article-full" id="article-1">
+  <section class="section white-section">
+    <div class="container px-lg-5" style="max-width:860px;">
+      <button onclick="hideArticle()" class="btn-outline mb-4" style="font-size:0.82rem;padding:8px 18px;"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+      <div class="d-flex gap-3 mb-3"><span class="blog-tag">Sustainability</span><span class="blog-date">January 15, 2024</span></div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;color:var(--charcoal);">The Future of Sustainable Packaging in India</h1>
+      <div class="blog-author-row mb-5">
+        <div class="blog-ava" style="width:48px;height:48px;font-size:1rem;">AK</div>
+        <div><div class="blog-aname" style="font-size:0.95rem;">Anand Kumar</div><div class="blog-read">Head of Sustainability, PackNova Industries · January 15, 2024 · 8 min read</div></div>
+      </div>
+      <div style="height:400px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#c5e8d4,#8ec4a8) url('https://images.unsplash.com/photo-1572177812156-58036aae439c?w=1000&q=80') center/cover no-repeat;margin-bottom:40px;box-shadow:var(--shadow);"></div>
+      <div class="article-body">
+        <p>India's packaging industry, valued at over $73 billion, is at an inflection point. The confluence of stringent Extended Producer Responsibility (EPR) regulations, rising consumer consciousness, and global supply chain sustainability pressures is forcing a fundamental rethink of how Indian manufacturers package their products.</p>
+        <h3>The Regulatory Push: EPR and Beyond</h3>
+        <p>The Central Pollution Control Board's EPR framework now mandates that producers, importers, and brand owners take responsibility for the end-of-life management of plastic packaging. Companies must register on the EPR portal, set annual targets for plastic waste collection and recycling, and submit annual compliance reports. Non-compliance attracts environmental compensation charges that can reach crores of rupees.</p>
+        <p>But EPR is just the beginning. India's single-use plastics ban, phased rollout of plastic credit mechanisms, and state-level green packaging incentives are collectively creating the most comprehensive sustainability policy framework India's packaging industry has ever seen.</p>
+        <div class="pull-quote">"Sustainable packaging is no longer a premium offering — it is rapidly becoming the baseline expectation for B2B and B2C buyers across India."</div>
+        <h3>Market Drivers Beyond Regulation</h3>
+        <p>Major FMCG and consumer goods companies — Hindustan Unilever, ITC, Marico, and Dabur — have all published ambitious sustainable packaging targets. HUL aims for 100% recyclable, reusable, or compostable plastic packaging by 2025. These commitments cascade directly to packaging suppliers like PackNova, driving demand for certified eco-friendly alternatives.</p>
+        <p>E-commerce growth has also been a powerful driver. India's e-commerce market is projected to reach $350 billion by 2030, and every order shipped generates packaging waste. Platforms like Flipkart and Amazon India are actively pressuring sellers to adopt sustainable packaging to meet their own corporate sustainability goals.</p>
+        <h3>What Sustainable Packaging Actually Means in Practice</h3>
+        <p>True sustainable packaging is not simply switching from plastic to paper. It requires a systems-thinking approach that considers the full lifecycle — from raw material sourcing and energy used in manufacturing to recyclability at end-of-life and logistics efficiency through right-sizing.</p>
+        <p>At PackNova, our sustainability journey began with FSC-certified paper sourcing, then progressed to water-based inks, solar energy adoption, and waste recycling. Our Green 2030 roadmap targets carbon neutrality across our entire value chain by the end of this decade.</p>
+        <h3>The Road Ahead</h3>
+        <p>The next five years will see accelerated adoption of innovative materials — mushroom mycelium composites, seaweed-based packaging, agricultural fibre boards, and enhanced paper-based flexible laminates that can replace multi-layer plastic films. The companies that invest in these transitions now will gain first-mover advantage as regulation and consumer preference align.</p>
+        <div class="tag-list"><span class="tag-item">Sustainability</span><span class="tag-item">EPR</span><span class="tag-item">Eco Packaging</span><span class="tag-item">India</span><span class="tag-item">Green Manufacturing</span></div>
+      </div>
+      <div style="margin-top:40px;padding-top:40px;border-top:1px solid var(--border);">
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:20px;color:var(--charcoal);">Related Articles</div>
+        <div class="row g-3">
+          <div class="col-md-4"><div class="blog-card" style="cursor:pointer;" onclick="showArticle(2)"><div class="blog-thumb" style="height:130px;"><div style="background:linear-gradient(135deg,#d4e8c4,#a4c88e) url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80') center/cover no-repeat;"></div></div><div class="blog-body" style="padding:14px;"><div class="blog-title" style="font-size:0.95rem;">Eco-Friendly Packaging Trends 2024</div></div></div></div>
+          <div class="col-md-4"><div class="blog-card" style="cursor:pointer;" onclick="showArticle(4)"><div class="blog-thumb" style="height:130px;"><div style="background:linear-gradient(135deg,#d8ddf0,#a8aed8) url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80') center/cover no-repeat;background-color:var(--cream-dark);"></div></div><div class="blog-body" style="padding:14px;"><div class="blog-title" style="font-size:0.95rem;">Smart Packaging Innovations</div></div></div></div>
+          <div class="col-md-4"><div class="blog-card" style="cursor:pointer;" onclick="showArticle(5)"><div class="blog-thumb" style="height:130px;"><div style="background:linear-gradient(135deg,#f5e6d0,#e8c9a0) url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&q=80') center/cover no-repeat;"></div></div><div class="blog-body" style="padding:14px;"><div class="blog-title" style="font-size:0.95rem;">E-Commerce Packaging Guide</div></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ARTICLE 2 ═══ -->
+<div class="article-full" id="article-2">
+  <section class="section white-section">
+    <div class="container px-lg-5" style="max-width:860px;">
+      <button onclick="hideArticle()" class="btn-outline mb-4" style="font-size:0.82rem;padding:8px 18px;"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+      <div class="d-flex gap-3 mb-3"><span class="blog-tag">Trends</span><span class="blog-date">December 28, 2023</span></div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;color:var(--charcoal);">Eco-Friendly Packaging Trends Reshaping 2024</h1>
+      <div class="blog-author-row mb-5"><div class="blog-ava" style="width:48px;height:48px;font-size:1rem;">SM</div><div><div class="blog-aname" style="font-size:0.95rem;">Sonal Mehta</div><div class="blog-read">Product Innovation Lead · December 28, 2023 · 6 min read</div></div></div>
+      <div style="height:400px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#d4e8c4,#a4c88e) url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&q=80') center/cover no-repeat;margin-bottom:40px;box-shadow:var(--shadow);"></div>
+      <div class="article-body">
+        <p>The packaging industry's green revolution is accelerating. While recycled paper and biodegradable plastics have been mainstream for years, 2024 brings a wave of genuinely disruptive innovations that could fundamentally change what packaging looks like, feels like, and does for our planet.</p>
+        <h3>1. Mycelium Packaging — Nature's Foam</h3>
+        <p>Mushroom mycelium packaging uses agricultural waste combined with mycelium (mushroom root networks) to grow custom-shaped protective packaging in 5–7 days. The result is 100% compostable, home-biodegradable packaging that matches EPS foam in protective performance while being entirely plant-derived.</p>
+        <div class="pull-quote">"The most exciting eco-packaging innovations of 2024 aren't just 'less bad' — they're actively regenerative."</div>
+        <h3>2. Seaweed-Based Flexible Packaging</h3>
+        <p>Seaweed grows rapidly without freshwater or fertiliser and sequesters significant carbon. Seaweed-derived biopolymers are now being processed into flexible films suitable for single-use sachets and wraps. Several Indian FMCG companies are piloting seaweed-based outer wraps for spice and food products.</p>
+        <h3>3. Agricultural Fibre Boards</h3>
+        <p>Boards made from wheat straw, rice husk, sugarcane bagasse, and cotton linter offer comparable strength with lower agricultural impact. India generates 500+ million tonnes of agricultural residue annually, making this a locally relevant, circular solution with significant commercial potential.</p>
+        <h3>4. Mono-Material Flexible Laminates</h3>
+        <p>Traditional flexible packaging is a multi-layer sandwich of different plastics that cannot be recycled. New mono-material structures — using only PE or PP throughout all layers — maintain barrier properties while being fully recyclable. India's largest FMCG brands are actively transitioning to comply with EPR targets.</p>
+        <h3>5. Paper-Based Barrier Packaging</h3>
+        <p>Advances in coating technology now enable paper to provide oxygen, moisture, and grease barriers previously only achievable with plastic laminates. Silica-based and water-based polymer coatings on paper substrate are enabling paper to replace plastic in demanding applications like coffee pods and frozen food bags.</p>
+        <div class="tag-list"><span class="tag-item">Eco-Friendly</span><span class="tag-item">Innovation</span><span class="tag-item">Trends 2024</span><span class="tag-item">Sustainable Materials</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ARTICLE 3 ═══ -->
+<div class="article-full" id="article-3">
+  <section class="section white-section">
+    <div class="container px-lg-5" style="max-width:860px;">
+      <button onclick="hideArticle()" class="btn-outline mb-4" style="font-size:0.82rem;padding:8px 18px;"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+      <div class="d-flex gap-3 mb-3"><span class="blog-tag">Industry</span><span class="blog-date">December 10, 2023</span></div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;color:var(--charcoal);">Why Industrial Packaging is the Backbone of India's Supply Chain</h1>
+      <div class="blog-author-row mb-5"><div class="blog-ava" style="width:48px;height:48px;font-size:1rem;">VP</div><div><div class="blog-aname" style="font-size:0.95rem;">Vikram Patel</div><div class="blog-read">GM – Sales, PackNova Industries · December 10, 2023 · 7 min read</div></div></div>
+      <div style="height:400px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#c5ddd0,#8fb8a3) url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1000&q=80') center/cover no-repeat;margin-bottom:40px;box-shadow:var(--shadow);"></div>
+      <div class="article-body">
+        <p>When economists talk about India's manufacturing renaissance — PLI schemes, Make in India, the China+1 strategy — they focus on factories, workforce, and technology. Rarely mentioned, yet absolutely critical, is industrial packaging: the silent enabler that allows products to move from factory gate to customer safely, efficiently, and cost-effectively.</p>
+        <h3>The Scale of India's Industrial Packaging Need</h3>
+        <p>India's industrial packaging market is estimated at ₹1.8 lakh crore and growing at 11–13% annually. Every product manufactured in India requires some form of industrial packaging before it can be shipped. As manufacturing output grows, so does packaging demand in lockstep.</p>
+        <div class="pull-quote">"Packaging is not a cost centre — it is a value enabler that reduces damage, improves logistics efficiency, and protects brand reputation."</div>
+        <h3>The Cost of Getting Packaging Wrong</h3>
+        <p>Industry studies suggest 11% of all goods transported suffer some form of damage in transit. For high-value products like electronics and pharmaceuticals, even minor damage rates translate into crores of rupees in losses annually. The right packaging — correctly specified, properly tested — can reduce these losses dramatically.</p>
+        <h3>Export Packaging — A Competitive Differentiator</h3>
+        <p>As India grows as an export manufacturing hub, the quality of industrial packaging becomes a direct competitive factor. International buyers evaluate packaging quality as a proxy for overall manufacturing capability. Export-grade corrugated boxes must meet ISTA, ASTM, and ISO transport testing standards.</p>
+        <div class="tag-list"><span class="tag-item">Industrial Packaging</span><span class="tag-item">Supply Chain</span><span class="tag-item">Export Quality</span><span class="tag-item">Manufacturing India</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ARTICLE 4 ═══ -->
+<div class="article-full" id="article-4">
+  <section class="section white-section">
+    <div class="container px-lg-5" style="max-width:860px;">
+      <button onclick="hideArticle()" class="btn-outline mb-4" style="font-size:0.82rem;padding:8px 18px;"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+      <div class="d-flex gap-3 mb-3"><span class="blog-tag">Innovation</span><span class="blog-date">November 22, 2023</span></div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;color:var(--charcoal);">Smart Packaging Innovations Transforming the Industry</h1>
+      <div class="blog-author-row mb-5"><div class="blog-ava" style="width:48px;height:48px;font-size:1rem;">RJ</div><div><div class="blog-aname" style="font-size:0.95rem;">Rohit Jain</div><div class="blog-read">Technology Innovation Head · November 22, 2023 · 5 min read</div></div></div>
+      <div style="height:400px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#d8ddf0,#a8aed8) url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80') center/cover no-repeat;background-color:var(--cream-dark);margin-bottom:40px;box-shadow:var(--shadow);"></div>
+      <div class="article-body">
+        <p>Packaging is no longer a passive container — it is becoming an active participant in product safety, brand engagement, and supply chain visibility. Smart packaging technologies are converging with Industry 4.0, IoT, and AI to create solutions that communicate, sense, and respond to their environment.</p>
+        <h3>QR Codes and Digital Product Passports</h3>
+        <p>The humble QR code has evolved from a simple URL gateway to a gateway for digital product passports — rich digital records of a product's origin, ingredients, sustainability credentials, and authenticity. In the EU, Digital Product Passports are becoming mandatory for certain categories by 2026, and India's pharmaceutical sector already mandates QR-based serialisation under Schedule H.</p>
+        <div class="pull-quote">"By 2027, an estimated 40% of consumer packaged goods globally will incorporate some form of smart packaging technology."</div>
+        <h3>NFC and RFID — Beyond the Barcode</h3>
+        <p>Near Field Communication (NFC) tags embedded in packaging enable consumers to tap their smartphones to access product information, verify authenticity, or unlock interactive brand experiences. For pharmaceutical and premium consumer goods, NFC tags are replacing traditional holograms as the anti-counterfeiting technology of choice.</p>
+        <h3>Time-Temperature Indicators</h3>
+        <p>For cold-chain products — vaccines, biologics, fresh foods — time-temperature indicators (TTIs) printed directly onto packaging change colour if the product has been exposed to unacceptable temperature conditions. These low-cost, label-integrated sensors eliminate the guesswork in cold-chain compliance.</p>
+        <h3>AI-Powered Packaging Design</h3>
+        <p>Generative AI is revolutionising packaging design — from automated dieline generation to AI-assisted graphic design and virtual prototyping. At PackNova, we are piloting AI tools that can generate multiple packaging design concepts from brand guidelines in minutes, drastically reducing design iteration cycles.</p>
+        <div class="tag-list"><span class="tag-item">Smart Packaging</span><span class="tag-item">IoT</span><span class="tag-item">QR Code</span><span class="tag-item">NFC</span><span class="tag-item">AI Design</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ARTICLE 5 ═══ -->
+<div class="article-full" id="article-5">
+  <section class="section white-section">
+    <div class="container px-lg-5" style="max-width:860px;">
+      <button onclick="hideArticle()" class="btn-outline mb-4" style="font-size:0.82rem;padding:8px 18px;"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+      <div class="d-flex gap-3 mb-3"><span class="blog-tag">E-Commerce</span><span class="blog-date">November 5, 2023</span></div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;color:var(--charcoal);">The Ultimate Guide to E-Commerce Packaging in India</h1>
+      <div class="blog-author-row mb-5"><div class="blog-ava" style="width:48px;height:48px;font-size:1rem;">NK</div><div><div class="blog-aname" style="font-size:0.95rem;">Neha Kapoor</div><div class="blog-read">E-Commerce Packaging Specialist · November 5, 2023 · 10 min read</div></div></div>
+      <div style="height:400px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#f5e6d0,#e8c9a0) url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1000&q=80') center/cover no-repeat;margin-bottom:40px;box-shadow:var(--shadow);"></div>
+      <div class="article-body">
+        <p>India's e-commerce market is projected to grow from $70 billion today to $350 billion by 2030. With 200+ million online shoppers and new consumers entering digital commerce daily, the country is witnessing the most rapid e-commerce adoption in its history. For sellers on Flipkart, Amazon, Meesho, and D2C platforms, packaging is not an afterthought — it is a strategic business asset.</p>
+        <h3>Why E-Commerce Packaging is Different</h3>
+        <p>Retail packaging is designed to attract attention on a shelf. E-commerce packaging must survive a far more brutal journey: warehouse conveyors, automated sortation systems, long-haul transport, last-mile delivery vehicles, and the hands of a consumer who may be disappointed by a damaged parcel. Your packaging must protect through all these touchpoints while still delighting at the moment of opening.</p>
+        <div class="pull-quote">"40% of consumers share photos of premium e-commerce packaging on social media — making your box a free marketing channel."</div>
+        <h3>Choosing the Right Box Type</h3>
+        <p>For most e-commerce shipments, 3-ply or 5-ply corrugated boxes provide the right balance of protection and cost. 3-ply single-wall boxes are adequate for lightweight, non-fragile items under 5 kg. 5-ply double-wall boxes are recommended for electronics, ceramics, and items above 5 kg.</p>
+        <h3>Dimensional Weight Optimisation</h3>
+        <p>Courier companies charge by dimensional weight (Length × Width × Height / 5000 for domestic air freight). Right-sizing your packaging to minimise empty space can significantly reduce logistics costs. A box 5 cm larger in each dimension than needed can add ₹30–80 per shipment — significant at scale.</p>
+        <h3>Platform Compliance Requirements</h3>
+        <p>Flipkart's 'Responsible Packaging Initiative' mandates specific packaging guidelines for sellers, including size limits on secondary packaging and requirements for recyclable materials. Amazon India has similar guidelines. Non-compliance can result in packaging chargebacks or listing penalties.</p>
+        <div class="tag-list"><span class="tag-item">E-Commerce</span><span class="tag-item">D2C</span><span class="tag-item">Packaging Guide</span><span class="tag-item">Unboxing</span><span class="tag-item">Flipkart</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="container px-lg-5">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6"><div class="footer-logo-text">Pack<em>Nova</em></div><p class="footer-desc">Premium packaging manufacturer in Ahmedabad, India. ISO 9001:2015 certified since 2005.</p><div class="footer-social"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="col-lg-2 col-md-6"><div class="footer-h">Products</div><ul class="footer-links"><li><a href="products.html">Corrugated Boxes</a></li><li><a href="products.html">Food Packaging</a></li><li><a href="products.html">Pharma Packaging</a></li><li><a href="products.html">Eco Packaging</a></li></ul></div>
+      <div class="col-lg-2 col-md-6"><div class="footer-h">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="quality.html">Quality</a></li><li><a href="sustainability.html">Sustainability</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+      <div class="col-lg-2 col-md-6"><div class="footer-h">Quick Links</div><ul class="footer-links"><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="col-lg-3"><div class="footer-h">Contact</div><div class="footer-contact-row"><i class="fas fa-phone-alt"></i><div>+91 79 2589 0000</div></div><div class="footer-contact-row"><i class="fas fa-envelope"></i><div>info@packnovaindustries.com</div></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 PackNova Industries Pvt. Ltd.</p><p>Made in India 🇮🇳</p></div>
+  </div>
+</footer>
+<div id="btt"><i class="fas fa-chevron-up"></i></div>
+<a id="wa" href="https://wa.me/919825000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+function showArticle(n) {
+  document.getElementById('blog-listing').classList.add('hidden');
+  document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
+  document.getElementById('article-' + n).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function hideArticle() {
+  document.getElementById('blog-listing').classList.remove('hidden');
+  document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
